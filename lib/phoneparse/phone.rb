@@ -9,13 +9,13 @@ module Phoneparse
       # Get the country
       _c = Phoneparse.default_country
       if not country.nil?
-        _country = Country.find_country_by_alpha2(country.to_s) || Country.find_country_by_alpha3(country.to_s)
+        _country = ::Country.find_country_by_alpha2(country.to_s) || ::Country.find_country_by_alpha3(country.to_s)
         if not _country.nil?
           _c = _country.alpha2
         end
       end
       if country.nil? and not ip.nil?
-        _s = Geocoder.search(_ip).first
+        _s = ::Geocoder.search(_ip).first
         if not _s.nil?
           _c = _s.country_code
         end
