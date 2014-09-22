@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "phoneparse"
   spec.version       = Phoneparse::VERSION
   spec.authors       = ["Hugo Lantaume"]
-  spec.email         = ["hugolantaume@gmail.com"]
+  spec.email         = ["hugolantaume+phoneparse@gmail.com"]
   spec.summary       = %q{A phone validation, formatting and parsing Ruby gem.}
   spec.description   = ""
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/hugolantaume/phoneparse"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,8 +18,9 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "phony"
-  spec.add_dependency "phonelib"
+  spec.add_dependency "phony", "~> 2.4"
+  spec.add_dependency "phonelib", "~> 0.3"
+  spec.add_dependency "countries", "~> 0.9"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
