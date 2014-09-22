@@ -1,4 +1,7 @@
 require "phoneparse/version"
+require "countries"
+require "phonelib"
+require "phony"
 
 # main module definition
 module Phoneparse
