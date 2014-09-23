@@ -18,8 +18,8 @@ module Phoneparse
     end
 
     # method for parsing phone number.
-    def parse(phone_number, country = nil, ip = nil)
-      Phoneparse::Phone.new phone_number, country, ip
+    def parse(number, options = {})
+      Phoneparse::Phone.new(number, options)
     end
     
   end

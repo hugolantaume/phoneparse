@@ -2,6 +2,7 @@ require "phoneparse/version"
 require "countries"
 require "phonelib"
 require "phony"
+require "geocoder"
 
 # main module definition
 module Phoneparse
