@@ -8,7 +8,6 @@ module Phoneparse
   end
 
   class Phone
-   
     # class initialization method
     #
     # ==== Attributes
@@ -55,6 +54,50 @@ module Phoneparse
       if not @phone.nil?
         @data = @phone.instance_variable_get :@data
       end
+    end
+
+    # Returns the original number passed for parsing
+    def original_number
+      @number
+    end
+
+    # method to get sanitized phone number (only numbers)
+    def sanitized_number
+      @number && @number.gsub(/[^0-9]+/, '') || ''
+    end
+
+    # Returns all phone types that matched valid patterns
+    def types
+      @phone.types
+    end
+
+    # Returns all possible types that matched possible patterns
+    def possible_types
+      @phone.possible_types
+    end
+
+    # Returns first phone type that matched
+    def type
+      @phone.type
+    end
+
+    # Returns all countries that matched valid patterns
+    def countries
+      @phone.countries
+    end
+
+    # Return countries with valid patterns
+    def valid_countries
+      @phone.valid_countries
+    end
+
+    # Returns first country that matched valid patterns
+    def country
+      @phone.country
+    end
+
+    # Returns first country code
+    def country_code
     end
 
     # Returns formatted national number
